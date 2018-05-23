@@ -7,4 +7,4 @@ Every Problem is solved by taking care of the time and space complexity and each
 Problem 1-Find K smallest number in a given array of Size n:
 
 In order to solve problems I have implemented 3 approaches:
-  <ul><ol>Sorting</ol><ol>Modified Selection Sorting</ol><ol>Using Max Heap</ol></ul>
+  <ol><li>Sorting</li><li>Modified Selection Sorting</li><li>Using Max Heap</li></li>
