@@ -25,7 +25,7 @@ public class KSmallestNumber {
 		for(int i=0;i<k;i++) {
 			temp = i;
 			for(int j=i+1;j<myArray.length;j++) {
-				if(myArray[j]<temp) {
+				if(myArray[j]<myArray[temp]) {
 					temp = j;
 				}
 			}
@@ -40,6 +40,69 @@ public class KSmallestNumber {
 	}
 	
 	public int[] usingMaxHeap(int[] myArray,int k) {
-		return null;
+		
+		int[] heapArray = buildMaxHeap(Arrays.copyOfRange(myArray, 0, k));   //Complexity for build max heap is O(k) where  k = number of elements in heap array
+		int heapSize;
+		heapSize = heapArray.length;
+
+		//Going for n-k iterations
+		for(int i=heapSize;i<myArray.length;i++) {
+			if(heapArray[0]>myArray[i]) {
+				heapArray[0] = myArray[i];
+				maxHeapify(heapArray,0);// log(k)
+				
+			}
+			
+		}
+		
+		// Total complexity  = O(k+(n-k)logk) with the heap size of k
+		return heapArray;
 	}
+	
+	private int[] buildMaxHeap(int[] heapArray) {
+		
+		for(int i=heapArray.length/2-1;i>=0;i--) {
+			maxHeapify(heapArray,i);  
+		}
+		
+		return heapArray;
+		
+	}
+	
+	private void maxHeapify(int[] heapArray,int i) {
+		
+		int left=-1,right=-1,largest=i, swap;
+		
+		
+	
+		if(2*i+1<heapArray.length) {
+			left = 2*i+1;
+			if(2*i+2<heapArray.length) {
+				right = 2*i+2;
+			}
+			
+		}
+		
+		if(left!=-1) {
+			if(heapArray[left]>heapArray[i]) {
+				largest = left;
+			}
+		}
+		if(right!=-1) {
+			if(heapArray[right]>heapArray[largest]) {
+				largest = right;
+			}
+		}
+		
+		if(largest!=i) {
+			swap = heapArray[i];
+			heapArray[i] = heapArray[largest];
+			heapArray[largest] = swap;
+			maxHeapify(heapArray,largest);
+		}
+
+		
+	}
+	
+	
 	}
