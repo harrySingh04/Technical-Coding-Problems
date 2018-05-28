@@ -1,4 +1,4 @@
-package problem1.annotations;
+package Problem1.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

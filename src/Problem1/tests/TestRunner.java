@@ -1,4 +1,4 @@
-package problem1.tests;
+package Problem1.tests;
 
 
 
@@ -6,7 +6,7 @@ package problem1.tests;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import problem1.annotations.Test;
+import Problem1.annotations.Test;
 
 public class TestRunner {
 

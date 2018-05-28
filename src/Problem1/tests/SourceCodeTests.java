@@ -1,9 +1,10 @@
-package problem1.tests;
+package Problem1.tests;
+
 
 import java.util.Random;
 
-import problem1.annotations.Test;
-import problem1.source.KSmallestNumber;
+import Problem1.annotations.Test;
+import Problem1.source.KSmallestNumber;
 
 public class SourceCodeTests {
 
