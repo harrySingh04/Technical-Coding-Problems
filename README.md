@@ -16,3 +16,22 @@ Problem3- Find the longest subsequence between two strings using Dynamic Program
 
 Problem4-Find the longest palindrome substring in a given string(max-length=1000).The problem is implemented in two ways :
 <ol><li>Using Greedy approach which might turn into timeout </li><li>Using Dynamic programming.</li></ol>
+
+Problem 5: Find the zig zag version of the string when number of rows are passed alongwith the string.(This problem was mentioned in Leetcode) and references for the problem description has been taken from there.
+For example: If the string is "PAYPALISHIRING" and number of rows = 3 then output would be PAHNAPLSIIGYI.
+
+zig zag for above string with number of rows would be
+ 
+      P       A       H       N
+      A   P   L    S  I   I   G
+      Y       I       R 
+      
+      Thus the output is PAHNAPLSIIGYIR.
+      
+      For same String with number of rows:
+      P           I             N
+      A       L   S         I   G
+      Y   A       H     R
+      P           I 
+      
+      Hence output string would be PINALSIGYAHRPI
